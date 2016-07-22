@@ -30,4 +30,11 @@ public class HeapArithmeticTest {
         HeapArithmetic.display(array);
     }
 
+    @Test
+        public void heapSort() throws Exception{
+        int [] array = new int []{-1,1,6,2,3,5,76,234,63,6,234};
+        HeapArithmetic.heapSort(array,array.length - 1);
+        HeapArithmetic.display(array);
+    }
+
 }

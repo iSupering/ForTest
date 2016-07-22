@@ -10,18 +10,15 @@ public class HeapArithmetic {
 //            System.out.println(("节点" + i + "是一个叶节点不需要往下调整..."));
             return;
         }
-        int left = array[i * 2];
-        int root = array[i];
-        int index = -1;
-        if (left < root) {
-            index = 2 * i;
+        int left = i * 2;
+        int index = i;
+        if (array[left] < array[index]) {
+            index = left;
         }
-        if (2 * i + 1 <= n) {
-            if (array[2 * i + 1] < left && index != -1) {
-                index = index + 1;
-            }
+        if (left + 1 <= n && array[left + 1] < array[index]) {
+                index = left + 1;
         }
-        if (index != -1) {
+        if (index != i) {
             swap(array, i, index);
             siftDown(array, n, index);
         }
@@ -67,6 +64,14 @@ public class HeapArithmetic {
     public static void creat(int[] array, int n) {
         for (int i = n / 2; i > 0; i--) {
             siftDown(array, n, i);
+        }
+    }
+
+    public static void heapSort(int [] array,int n){
+        creat(array,n);
+        for(int i = n ; i > 1;i--){
+            swap(array,i,1);
+            siftDown(array,i-1,1);
         }
     }
 }
