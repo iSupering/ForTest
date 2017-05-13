@@ -19,7 +19,6 @@ public class ForTest {
 //            System.out.println("this is a new Test haha");
         }
         //我感觉 我真的很喜欢 骂人呀，哇哈哈
-        int s ;
         System.out.println("我是一只小小鸟，怎么飞也飞不高");
 
     }
