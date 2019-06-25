@@ -15,11 +15,7 @@ public class ForTest {
             if(j >= i/2){
                 System.out.println(i);
             }
-
-//            System.out.println("this is a new Test haha");
         }
-
-        System.out.println("我是一只小小鸟，怎么飞也飞不高");
-
+        System.out.println("hello word");
     }
 }
